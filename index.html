@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portal/trap_drug</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Переключатель тем -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="toggle-label">
+            <!-- Луна (темная тема) -->
+            <span class="toggle-icon moon-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79C20.8427 14.4922 20.2039 16.1144 19.1583 17.4668C18.1127 18.8192 16.7035 19.8458 15.0957 20.4265C13.4879 21.0073 11.748 21.1141 10.0795 20.7356C8.41103 20.357 6.88297 19.5088 5.67403 18.2918C4.46509 17.0748 3.62768 15.5409 3.26073 13.8703C2.89378 12.1997 3.01278 10.4612 3.60486 8.85763C4.19694 7.25405 5.23357 5.85276 6.59376 4.81754C7.95395 3.78233 9.58118 3.15734 11.285 3C10.285 4.34869 9.77385 6.00788 9.8404 7.69996C9.90695 9.39204 10.5471 11.0068 11.6479 12.2933C12.7487 13.5798 14.2433 14.463 15.9084 14.8136C17.5734 15.1642 19.3049 14.9568 20.84 14.2288C20.999 14.106 21 12.79 21 12.79Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            <!-- Солнце (светлая тема) -->
+            <span class="toggle-icon sun-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </span>
+        </label>
+    </div>
+
+    <div class="container">
+        <h1>Portal</h1>
+        
+        <div class="cards">
+            <!-- Карточка 1: Telegram -->
+            <a href="https://t.me/trap_drug" target="_blank" class="card" data-cursor="true">
+                <div class="card-content">
+                    <div class="image-wrapper">
+                        <img src="фото/ac86904e-060a-4a43-9d8c-2e4e5505deeb.jpg" alt="Связь со мной">
+                    </div>
+                    <h2>Message/DM</h2>
+                    <p>@trap_drug</p>
+                </div>
+                <div class="glow-overlay"></div>
+            </a>
+
+            <!-- Карточка 2: Телеграм канал -->
+            <a href="https://t.me/JohnnyKuvalda" target="_blank" class="card" data-cursor="true">
+                <div class="card-content">
+                    <div class="image-wrapper">
+                        <img src="фото/66be6576-8aa1-45c6-bf13-fbe504746dab.jpg" alt="Моё портфолио">
+                    </div>
+                    <h2>Телеграм канал</h2>
+                    <p>Моё портфолио</p>
+                </div>
+                <div class="glow-overlay"></div>
+            </a>
+
+            <!-- Карточка 3: Донат -->
+            <a href="https://www.tbank.ru/cf/3QorqceoUbu" target="_blank" class="card" data-cursor="true">
+                <div class="card-content">
+                    <div class="image-wrapper">
+                        <img src="фото/25a47c7a758e66b8107fe6c4b5eaa6f1.jpg" alt="Поддержать">
+                    </div>
+                    <h2>Пожертвование</h2>
+                    <p>на развитие</p>
+                </div>
+                <div class="glow-overlay"></div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // ===== ЭФФЕКТ СВЕЧЕНИЯ =====
+        document.querySelectorAll('.card').forEach(card => {
+            const glow = card.querySelector('.glow-overlay');
+            
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                
+                const isLight = document.body.classList.contains('light-theme');
+                const hue = isLight ? 210 + (x / 100) * 70 : 340 + (x / 100) * 50;
+                
+                glow.style.setProperty('--x', x + '%');
+                glow.style.setProperty('--y', y + '%');
+                glow.style.setProperty('--hue', hue + 'deg');
+                glow.style.opacity = '1';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                glow.style.opacity = '0';
+            });
+        });
+
+        // ===== ПЕРЕКЛЮЧАТЕЛЬ ТЕМ =====
+        const themeSwitch = document.getElementById('theme-switch');
+        
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-theme');
+            themeSwitch.checked = true;
+        }
+
+        themeSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('light-theme');
+            
+            if (document.body.classList.contains('light-theme')) {
+                localStorage.setItem('theme', 'light');
+            } else {
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // ===== ДЛЯ ТЕЛЕФОНОВ =====
+        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+            document.body.classList.add('touch-device');
+            
+            document.querySelectorAll('.card').forEach(card => {
+                const glow = card.querySelector('.glow-overlay');
+                
+                card.addEventListener('touchstart', () => {
+                    const isLight = document.body.classList.contains('light-theme');
+                    const hue = isLight ? 220 : 340;
+                    glow.style.setProperty('--hue', hue + 'deg');
+                    glow.style.setProperty('--x', '50%');
+                    glow.style.setProperty('--y', '50%');
+                    glow.style.opacity = '1';
+                });
+                
+                card.addEventListener('touchend', () => {
+                    glow.style.opacity = '0';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
