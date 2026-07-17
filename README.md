@@ -1,5 +1,5 @@
-## TrapDrug Portal
-# trapdrug.github.io
+# TrapDrug Portal
+## trapdrug.github.io
 
 Это мой первый сайт-переходник (портфолио), который служит центральной точкой для связи и демонстрации моих проектов.
 
