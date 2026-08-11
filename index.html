@@ -1,152 +1,245 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portal/trap_drug</title>
-    
-    <!-- ===== Фавикон ===== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/фото/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/фото/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/фото/favicon-16x16.png">
-    <link rel="manifest" href="/фото/site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="/фото/favicon.ico">
-    
+    <title>Минина Наталия — Искусство глубокой релаксации</title>
+    <meta name="description" content="Студия спа-массажа «Минина Наталия» — классический массаж, стоун-терапия, восточные ритуалы и обучение мастерству спа-массажа.">
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Переключатель тем -->
-    <div class="theme-toggle">
-        <input type="checkbox" id="theme-switch">
-        <label for="theme-switch" class="toggle-label">
-            <!-- Луна (темная тема) -->
-            <span class="toggle-icon moon-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12.79C20.8427 14.4922 20.2039 16.1144 19.1583 17.4668C18.1127 18.8192 16.7035 19.8458 15.0957 20.4265C13.4879 21.0073 11.748 21.1141 10.0795 20.7356C8.41103 20.357 6.88297 19.5088 5.67403 18.2918C4.46509 17.0748 3.62768 15.5409 3.26073 13.8703C2.89378 12.1997 3.01278 10.4612 3.60486 8.85763C4.19694 7.25405 5.23357 5.85276 6.59376 4.81754C7.95395 3.78233 9.58118 3.15734 11.285 3C10.285 4.34869 9.77385 6.00788 9.8404 7.69996C9.90695 9.39204 10.5471 11.0068 11.6479 12.2933C12.7487 13.5798 14.2433 14.463 15.9084 14.8136C17.5734 15.1642 19.3049 14.9568 20.84 14.2288C20.999 14.106 21 12.79 21 12.79Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </span>
-            <!-- Солнце (светлая тема) -->
-            <span class="toggle-icon sun-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-                    <path d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </span>
-        </label>
-    </div>
 
-    <div class="container">
-        <h1>Portal</h1>
-        
-        <div class="cards">
-            <!-- Карточка 1: Telegram -->
-            <a href="https://t.me/enkipo" target="_blank" class="card" data-cursor="true">
-                <div class="card-content">
-                    <div class="image-wrapper">
-                        <img src="фото/загруженное.png" alt="Связь со мной">
-                    </div>
-                    <h2>Message/DM</h2>
-                    <p>@enkipo</p>
-                </div>
-                <div class="glow-overlay"></div>
+    <header class="header" id="header">
+        <div class="header-inner">
+
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Логотип" class="logo-img">
+                <span class="logo-text">
+                    <span class="logo-name">Минина Наталия</span>
+                    <span class="logo-sub">студия спа-массажа</span>
+                </span>
             </a>
 
-            <!-- Карточка 2: Гитхаб -->
-            <a href="https://github.com/trapdrug" target="_blank" class="card" data-cursor="true">
-                <div class="card-content">
-                    <div class="image-wrapper">
-                        <img src="фото/https___images.genius.com_fc07f194b6c0e7ddba6e5733a52af528.1000x1000x1.png" alt="Моё портфолио">
-                    </div>
-                    <h2>GitHub</h2>
-                    <p>моё портфолио</p>
-                </div>
-                <div class="glow-overlay"></div>
-            </a>
+            <nav class="nav" id="nav">
+                <a href="#services">Услуги</a>
+                <a href="#services">Прайс</a>
+                <a href="#courses">Курсы</a>
+                <a href="#contacts">Контакты</a>
+                <a href="booking.html" class="btn btn-primary nav-cta-mobile">Записаться</a>
+            </nav>
 
-            <!-- Карточка 3: Донат -->
-            <a href="https://www.tbank.ru/cf/3QorqceoUbu" target="_blank" class="card" data-cursor="true">
-                <div class="card-content">
-                    <div class="image-wrapper">
-                        <img src="фото/25a47c7a758e66b8107fe6c4b5eaa6f1.jpg" alt="Поддержать">
-                    </div>
-                    <h2>Пожертвование</h2>
-                    <p>на развитие</p>
-                </div>
-                <div class="glow-overlay"></div>
-            </a>
+            <div class="header-actions">
+                <a href="booking.html" class="btn btn-primary btn-sm header-cta">Записаться</a>
+                <button class="burger" id="burger" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
         </div>
-    </div>
+    </header>
+
+    <main>
+
+        <section class="hero" id="hero">
+            <div class="hero-sun"></div>
+            <div class="hero-rays"></div>
+
+            <div class="hero-content">
+                <span class="hero-eyebrow anim anim-1">Студия спа-массажа</span>
+                <h1 class="anim anim-2">Искусство глубокой релаксации</h1>
+                <p class="hero-subtitle anim anim-3">Баланс огня и воды. Премиальная тактильность и уют восточного спа</p>
+                <div class="hero-actions anim anim-4">
+                    <a href="booking.html" class="btn btn-primary btn-lg">Записаться на консультацию</a>
+                    <div class="social-links">
+                        <!-- Instagram: ссылка на профиль -->
+                        <a href="https://www.instagram.com/minina_natalia3?igsh=MWkxd3h0OGc0ZWlp" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                        <!-- Telegram-канал: ссылка на канал -->
+                        <a href="https://t.me/mininaNatali317" class="social-link" aria-label="Telegram" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#services" class="scroll-hint" aria-label="Прокрутить вниз">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <section class="services" id="services">
+            <div class="section-header reveal">
+                <div class="deco-divider"><span class="diamond"></span></div>
+                <h2>Прайс на услуги</h2>
+                <p class="section-subtitle">Выберите ритуал, который подарит вашему телу глубокое восстановление</p>
+            </div>
+
+            <div class="services-grid">
+
+                <!-- Фото процедуры: замените на <img src="классический-массаж.jpg"> -->
+                <article class="service-card">
+                    <div class="service-card-photo">
+                        <i class="fa-regular fa-hand"></i>
+                        <span>Фото<br>процедуры</span>
+                    </div>
+                    <h3>Классический массаж</h3>
+                    <div class="service-price">3 500 ₽</div>
+                </article>
+
+                <!-- Фото процедуры: замените на <img src="стоун-терапия.jpg"> -->
+                <article class="service-card">
+                    <div class="service-card-photo">
+                        <i class="fa-regular fa-gem"></i>
+                        <span>Фото<br>процедуры</span>
+                    </div>
+                    <h3>Стоун-терапия</h3>
+                    <div class="service-price">5 000 ₽</div>
+                </article>
+
+                <!-- Фото процедуры: замените на <img src="восточный-ритуал.jpg"> -->
+                <article class="service-card">
+                    <div class="service-card-photo">
+                        <i class="fa-regular fa-sun"></i>
+                        <span>Фото<br>процедуры</span>
+                    </div>
+                    <h3>Восточный ритуал</h3>
+                    <div class="service-price">6 500 ₽</div>
+                </article>
+
+                <!-- Фото процедуры: замените на <img src="тайский-массаж.jpg"> -->
+                <article class="service-card">
+                    <div class="service-card-photo">
+                        <i class="fa-regular fa-leaf"></i>
+                        <span>Фото<br>процедуры</span>
+                    </div>
+                    <h3>Тайский массаж</h3>
+                    <div class="service-price">5 500 ₽</div>
+                </article>
+
+                <!-- Фото процедуры: замените на <img src="лимфодренажный-массаж.jpg"> -->
+                <article class="service-card">
+                    <div class="service-card-photo">
+                        <i class="fa-regular fa-droplet"></i>
+                        <span>Фото<br>процедуры</span>
+                    </div>
+                    <h3>Лимфодренажный массаж</h3>
+                    <div class="service-price">4 200 ₽</div>
+                </article>
+
+                <!-- Фото процедуры: замените на <img src="ароматерапия.jpg"> -->
+                <article class="service-card">
+                    <div class="service-card-photo">
+                        <i class="fa-regular fa-moon"></i>
+                        <span>Фото<br>процедуры</span>
+                    </div>
+                    <h3>Ароматерапия и релакс</h3>
+                    <div class="service-price">3 800 ₽</div>
+                </article>
+
+            </div>
+
+            <div class="services-cta reveal">
+                <a href="booking.html" class="btn btn-primary btn-lg"><i class="fa-regular fa-calendar-check"></i> Онлайн запись</a>
+            </div>
+        </section>
+
+        <section class="courses" id="courses">
+            <div class="courses-inner">
+
+                <div class="courses-content reveal">
+                    <div class="deco-divider"><span class="diamond"></span></div>
+                    <h2>Обучение мастерству спа-массажа</h2>
+                    <p>Авторский курс для начинающих и практикующих. Техники работы с камнями, стоун-терапия, восточные практики. Доступ к закрытому Telegram-каналу с видеоуроками и методичкам навсегда.</p>
+                    <ul class="courses-list">
+                        <li><i class="fa-regular fa-circle-check"></i> Техники работы с камнями</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Стоун-терапия</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Восточные практики</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Закрытый Telegram-канал с видеоуроками</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Методички — навсегда</li>
+                    </ul>
+                    <!-- Ссылка на страницу курсов: замените href="#" на реальный URL -->
+                    <a href="#" class="btn btn-outline">Подробнее о курсах</a>
+                </div>
+
+                <div class="courses-visual reveal reveal-delay-1">
+                    <img src="logo.png" alt="Логотип студии" class="courses-logo">
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" id="contacts">
+        <div class="footer-inner">
+
+            <div class="deco-divider reveal"><span class="diamond"></span></div>
+            <h2 class="reveal">Свяжитесь с нами</h2>
+            <p class="footer-sub reveal">Ответим на вопросы, подберём ритуал и запишем на удобное время</p>
+
+            <div class="footer-actions reveal">
+                <a href="https://t.me/Mininanatali3" class="btn btn-primary" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Написать в Telegram</a>
+                <a href="https://t.me/mininaNatali317" class="btn btn-outline" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> Подписаться на Telegram-канал</a>
+            </div>
+
+            <div class="footer-social reveal-delay-1">
+                <!-- Instagram: ссылка на профиль -->
+                <a href="https://www.instagram.com/minina_natalia3?igsh=MWkxd3h0OGc0ZWlp" class="btn btn-outline" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Мы в Instagram</a>
+            </div>
+
+            <p class="footer-copy">Информация на сайте не является публичной офертой. Цены и условия могут быть изменены. Все права защищены. Студия спа-массажа</p>
+
+        </div>
+    </footer>
 
     <script>
-        // ===== ЭФФЕКТ СВЕЧЕНИЯ =====
-        document.querySelectorAll('.card').forEach(card => {
-            const glow = card.querySelector('.glow-overlay');
-            
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = ((e.clientX - rect.left) / rect.width) * 100;
-                const y = ((e.clientY - rect.top) / rect.height) * 100;
-                
-                const isLight = document.body.classList.contains('light-theme');
-                const hue = isLight ? 210 + (x / 100) * 70 : 340 + (x / 100) * 50;
-                
-                glow.style.setProperty('--x', x + '%');
-                glow.style.setProperty('--y', y + '%');
-                glow.style.setProperty('--hue', hue + 'deg');
-                glow.style.opacity = '1';
-            });
+        // Хедер: тень при скролле
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 40);
+        }, { passive: true });
 
-            card.addEventListener('mouseleave', () => {
-                glow.style.opacity = '0';
+        // Бургер-меню
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav');
+
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            nav.classList.toggle('nav-open');
+            document.body.classList.toggle('no-scroll');
+        });
+
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                burger.classList.remove('active');
+                nav.classList.remove('nav-open');
+                document.body.classList.remove('no-scroll');
             });
         });
 
-        // ===== ПЕРЕКЛЮЧАТЕЛЬ ТЕМ =====
-        const themeSwitch = document.getElementById('theme-switch');
-        
-        if (localStorage.getItem('theme') === 'light') {
-            document.body.classList.add('light-theme');
-            themeSwitch.checked = true;
-        }
-
-        themeSwitch.addEventListener('change', () => {
-            document.body.classList.toggle('light-theme');
-            
-            if (document.body.classList.contains('light-theme')) {
-                localStorage.setItem('theme', 'light');
-            } else {
-                localStorage.setItem('theme', 'dark');
-            }
+        // Плавное появление при скролле
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
         });
 
-        // ===== ДЛЯ ТЕЛЕФОНОВ =====
-        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-            document.body.classList.add('touch-device');
-            
-            document.querySelectorAll('.card').forEach(card => {
-                const glow = card.querySelector('.glow-overlay');
-                
-                card.addEventListener('touchstart', () => {
-                    const isLight = document.body.classList.contains('light-theme');
-                    const hue = isLight ? 220 : 340;
-                    glow.style.setProperty('--hue', hue + 'deg');
-                    glow.style.setProperty('--x', '50%');
-                    glow.style.setProperty('--y', '50%');
-                    glow.style.opacity = '1';
-                });
-                
-                card.addEventListener('touchend', () => {
-                    glow.style.opacity = '0';
-                });
-            });
-        }
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
+
 </body>
 </html>
